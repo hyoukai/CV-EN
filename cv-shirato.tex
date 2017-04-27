@@ -1,0 +1,254 @@
+
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Gota}{SHIRATO}{
+4 Rue Recteur Schmitt 44300, NANTES, FRANCE \\
+\faEnvelope\href{mailto:gota.shirato@eleves.ec-nantes.fr}{gota.shirato@eleves.ec-nantes.fr} | \faPhone +33 6 95 59 66 55 \\
+\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
+\centering{
+Fourth-year engineering student seeking a 20-week internship}\\
+\centering{
+in the field of \custombold{Virtual Reality} from May 2017
+}
+
+}
+\sectionsep 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     PURPOSE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     FORMATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Qualifications} 
+
+\subsection{Ecole Centrale de Nantes}
+\location{Sept. 2015 - Present | Nantes}
+\descript{Double Degree Program\\
+	\textbf{Virtual Reality} }
+     - Image Processing (OpenCV)\\
+	 - Augmented Reality\\
+	 - Real-time Computer Graphics\\
+     - Collision Detection\\
+	 - 3D Modeling (CAD)\\
+
+\sectionsep
+
+\subsection{Keio University}
+\location{April 2013 - June 2015 | Tokyo}
+\descript{System Design Engineering}
+- Engineering Mathematics\\
+- Thermo-fluid Dynamics\\
+- Applied Mathematical Analysis\\
+- Architectural Planning and Design\\
+
+\vspace{1.2cm}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+\faGithub Github:// \href{https://github.com/gshirato}{\custombold{github.com/gshirato}} \\
+\faLinkedinSquare Linkedin:// \href{https://www.linkedin.com/in/gota-shirato}{\custombold{gota-shirato}} \\
+\faSlack Slack:// @gota
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     INTERESTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{7mm}
+\section{Interests} 
+\descript{Sport} \vspace{1mm}
+\underline{\textbf{RUGBY}} Playing as a member of ECN rugby team \\ \vspace{0.5mm}
+\underline{\textbf{SOCCER}} Supporter of \custombold{Urawa Reds} Japanese Football Club\\ \vspace{0.5mm}
+\underline{\textbf{CLIMBING}} \custombold{Japanese Alps}\\ \vspace{0.5mm}
+%\underline{\textbf{TENNIS}} 3 ans d'experience au collège.\\ \vspace{0.5mm}
+\underline{\textbf{WORK OUT}} \custombold{Bench Press} 100kg, \custombold{Squat} 100kg, \custombold{Dead Lift} 140kg \\
+\sectionsep
+
+\descript{OTHERS} \vspace{1mm}
+\underline{\textbf{VIDEO GAME}} Strategic, Sportive\\ \vspace{0.5mm}
+\underline{\textbf{TRIP}} For football matches, understanding \custombold{town planning} and \custombold{architecture} and \custombold{intercultural communication}\\ \vspace{0.5mm}
+\underline{\textbf{VIDEOS}} Comedy, Horror, Drama
+\custombold{Rakugo}(Japonaise Comedy)
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK (empty)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROFESSIONAL EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Professional Experience}
+
+\runsubsection{UI for BIMSurfer}
+\descript{| Virtual Reality Project 1}
+\location{Feb. 2017 – Mar. 2017 | Ecole Centrale de Nantes, Nantes, France}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Matching of photographs of a building with its BIM model
+\item Implementing methods in JavaScript to improve UI
+\item Installing OpenCV Python for Image Processing
+\end{tightemize}
+\sectionsep
+
+\runsubsection{UI for the 3D map in Unity}
+\descript{| Virtual Reality Project 2}
+\location{Oct. 2016 – Jan. 2017 | Ecole Centrale de Nantes, Nantes, France}
+\begin{tightemize}
+\item Designing of an user interface on the multi-touch screen
+\item Construction of a functional and applicable plug-in
+\item Manipulation of the 3D model of Nantes in 1900 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Institut Mutualiste de Montsouris}
+\descript{| Internship}
+\location{July 2016 | Biomedical service, Montsouris, Paris}
+\begin{tightemize}
+\item Management of maintenance of medical devices with nine people
+\item Development of a maintenance database (Excel VBA)
+\end{tightemize}
+\sectionsep
+
+\runsubsection{EDYCEM}(Concrete Plant)
+\descript{| Industrial Projects for Students}
+\location{Oct. 2015 – Sep. 2016 | Vendée, France}
+\begin{tightemize}
+\item Production of an IT solution for the identification of concrete
+\item Analysis of deep \custombold{traceability} technologies
+\item Second place in the Contest
+\end{tightemize}
+\sectionsep
+
+\runsubsection{\href{http://www.datastadium.co.jp/en/}{DATA Stadium Inc.}}
+\descript{| Part-time Work - Sportive Analyses}
+\location{Aug. 2013 – June 2015 | Sangenjaya, Tokyo}
+\begin{tightemize}
+\item Filming of rugby matches in stadiums
+\item Analysis of matches with\href{http://www.datastadium.co.jp/service/scrum.html}{\custombold{DataScrum}}(software dedicated to statistical analysis) 
+\item Creating improvement tools for the team %(par exemple le résumé de matchs)
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COMPETENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{IT}
+\location{Specialized Software: }
+\textbullet{} \href{https://drive.google.com/open?id=0B6rPLgzEHZsROHV4eUJxNUF6YWc}{\custombold{Unity}} Development of the geometric information system on a touch screen\\ 
+\textbullet{} \href{http://bimsurfer.org/}{\custombold{BIMSurfer}} Development of BIM UI for school building data\\ 
+\textbullet{} \href{https://puredata.info/}{\custombold{Pure Data}}and\custombold{Processing} Creating a game to represent sound immersion \\
+\textbullet{} CAD and Image Processing (\custombold{CATIA}, \custombold{Solid Work}, \custombold{Cast3m}, \custombold{ImageJ}, \custombold{Paraview}) \\
+\textbullet{} \custombold{Windows Office} and their \custombold{VBA}(e.g. Extract from a database) \\
+\sectionsep
+
+\location{Programming:}
+\textbullet{} \custombold{C++} 3 years experience(Library: OpenCV, OpenGL, OSG) \\ \textbullet{} \custombold{C\#}  Unity
+  \textbullet{} \custombold{JavaScript} BIMSurfer \textbullet{} \custombold{Swift} Knowledge for iPhone app \\
+\textbullet{} \custombold{Matlab} Exercises to solve mathematical and robotic questions \\ 
+\textbullet{} \custombold{Java} A game powered by Processing \textbullet{} \custombold{Access SQL} Management of a database \\
+\textbullet{} \custombold{Python} Basic knowledge and applications \\
+\sectionsep
+
+\subsection{Languages}
+\custombold{Japanese} \emph{Native Speaker}\\
+\custombold{English} \emph{Fairly Fluent in written and spoken} \href{https://www.etsglobal.org/Fr/Fre}{\custombold{TOEIC}}900(2017) \\
+\custombold{French} \emph{Professional Level}\href{http://www.etsglobal.org/Fr/Fre/Tests-et-preparation/Le-test-TFI}{\custombold{TFI}}785 B2+(2017)2 years in Vichy and Nantes\\
+\vspace{0.5mm}
+\custombold{Spanish} \emph{Basic Knowledge} | 1 month in Valencia\\
+\custombold{Chinois} \emph{Basic Knowledge} | 2 years of study in Japan's university
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SOCIETIES empty
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
